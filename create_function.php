@@ -17,6 +17,21 @@ without any warranty.
 namespace Php5Friends
 {
     /**
+     * Create a Closure from string
+     *
+     * NOTICE: Do not input that passed from user request
+     *
+     * @see https://www.php.net/create_function
+     * @param string $args
+     * @param string $code
+     * @return \Closure
+     */
+    function create_closure($args, $code)
+    {
+        return eval("return function ({$args}) { {$code} };");
+    }
+
+    /**
      * Create an anonymous (lambda-style) function, without error
      *
      * NOTICE: Do not input that passed from user request

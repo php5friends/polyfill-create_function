@@ -24,6 +24,10 @@ This package provides `Php5Friends\create_function()` and `create_function()`
 
 Wrapper function of [`create_function()`].  Provides a function generation mechanism for environments where `create_function()` function does not exist.
 
+### `Php5Friends\create_closure()`
+
+Create a `Closure` from same paremeters of `create_function()`.
+
 ### `create_function()` for PHP 8
 
 Simply Polyfill function of [`create_function()`].
