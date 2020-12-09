@@ -27,7 +27,7 @@ namespace Php5Friends
      * @phpstan-return callable-string
      * @psalm-return callable-string
      */
-    function create_function($args, $code): string
+    function create_function($args, $code)
     {
         if (PHP_MAJOR_VERSION <= 7) {
             return @\create_function($args, $code);
