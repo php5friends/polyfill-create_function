@@ -39,12 +39,12 @@ namespace Php5Friends
 
         do {
             $i++;
-            $name = "lambda_{$i}";
-        } while (\function_exists("{$namespace}\\{$name}"));
+            $name = "__{$namespace}_lambda_{$i}";
+        } while (\function_exists($name));
 
-        eval("namespace {$namespace} { function {$name}({$args}) { {$code} } }");
+        eval("function {$name}({$args}) { {$code} }");
 
-        return __NAMESPACE__ . '\\' . $name;
+        return $name;
     }
 }
 
